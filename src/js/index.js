@@ -20,24 +20,55 @@ export const onModalClose = () => {
 $showResultButton.addEventListener("click", onModalShow);
 $modalClose.addEventListener("click", onModalClose);
 
+// ----------------------
+const $modalNumber = document.querySelector(".modal-number");
+const $switch = document.querySelector(".switch");
+
+export const onModalNumberShow = () => {
+  $modalNumber.classList.add("open");
+};
+export const onModalNumberClose = () => {
+  $modalNumber.classList.remove("open");
+};
+
+$modalClose.addEventListener("click", onModalNumberClose);
+$switch.addEventListener("click", (event) => {
+  if (event.target.checked) {
+    console.log("ddd");
+  }
+});
+
+// ----------------------
+
 const calCntLottoNums = (money) => {
   return (money - (money % 1000)) / 1000;
 };
 
-const setCntLotto = (lottoCnt) => {
+const setLottoCnt = (lottoCnt) => {
   return `<label class="flex-auto my-0">총 ${lottoCnt}개를 구매하였습니다.</label>`;
+};
+
+const setLottoImg = () => {
+  return `<span class="mx-1 text-4xl">🎟️ </span>`;
 };
 
 const setPurchasedLottoSection = (lottoCnt) => {
   const $purchasedLottoSectionDiv = document.querySelector(
     "#purchased-lotto-section > div"
   );
+  const $purchasedLottoImg = document.querySelector("#purchased-lotto-img");
+
   showPurchasedLottoSection();
-  console.log($purchasedLottoSectionDiv);
+  $purchasedLottoSectionDiv.removeChild($purchasedLottoSectionDiv.firstChild);
+  $purchasedLottoImg.innerHTML = "";
+
   $purchasedLottoSectionDiv.insertAdjacentHTML(
     "afterbegin",
-    setCntLotto(lottoCnt)
+    setLottoCnt(lottoCnt)
   );
+  for (let i = 0; i < lottoCnt; i++) {
+    $purchasedLottoImg.insertAdjacentHTML("beforeend", setLottoImg());
+  }
 };
 
 const purchaseLottoStart = () => {
@@ -55,7 +86,7 @@ const init = () => {
   // $lottoNumbersToggleButton.addEventListener("click");
   hidePurchasedLottoSection();
   disabledWinningAndBonusNumber();
-  disabledResultModalButton();
+  // disabledResultModalButton();
 };
 
 export const luckyLotto = () => {

@@ -1,4 +1,4 @@
-.modal {
+.modal, .modal-number {
   opacity: 0;
   visibility: hidden;
   display: flex;
@@ -12,12 +12,12 @@
   z-index: 2;
 }
 
-.modal.open {
+.modal.open, .modal-number.open {
   opacity: 1;
   visibility: visible;
 }
 
-.modal-inner {
+.modal-inner, .modal-number-inner {
   transition: top 0.25s ease;
   max-width: 350px;
   margin: auto;
@@ -27,7 +27,7 @@
   position: relative;
 }
 
-.modal-close {
+.modal-close, .modal-number-close {
   margin: 20px;
   width: 20px;
   position: absolute;
