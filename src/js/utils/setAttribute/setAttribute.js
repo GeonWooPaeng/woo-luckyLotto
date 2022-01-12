@@ -13,3 +13,4 @@ export const disabledElement = (element) => {
 export const enabledElement = (element) => {
   return element.removeAttribute("disabled");
 };
+
