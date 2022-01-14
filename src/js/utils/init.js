@@ -14,13 +14,9 @@ const LottoStart = () => {
 
 export const init = () => {
   const $purchaseLottoButton = document.querySelector("#purchase-lotto-button");
-  const $lottoNumbersToggleButton = document.querySelector(
-    ".lotto-numbers-toggle-button"
-  );
 
   $purchaseLottoButton.addEventListener("click", LottoStart);
-  // $lottoNumbersToggleButton.addEventListener("click");
-  hidePurchasedLottoSection();
-  disabledWinningAndBonusNumber();
-  disabledResultModalButton();
+  // hidePurchasedLottoSection();
+  // disabledWinningAndBonusNumber();
+  // disabledResultModalButton();
 };

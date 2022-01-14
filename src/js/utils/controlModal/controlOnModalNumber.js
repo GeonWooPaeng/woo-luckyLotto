@@ -5,10 +5,12 @@ import {
 
 export const controlOnModalNumber = () => {
   const $modalNumberClose = document.querySelector(".modal-number-close");
-  const $switch = document.querySelector(".switch");
+  const $lottoNumbersToggleButton = document.querySelector(
+    ".lotto-numbers-toggle-button"
+  );
 
   $modalNumberClose.addEventListener("click", onModalNumberClose);
-  $switch.addEventListener("click", (event) => {
+  $lottoNumbersToggleButton.addEventListener("click", (event) => {
     if (event.target.checked) {
       onModalNumberShow();
     }

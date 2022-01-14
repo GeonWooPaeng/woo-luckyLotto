@@ -1,5 +1,6 @@
 import { init } from "./utils/init.js";
 import { controlOnModalNumber } from "./utils/controlModal/controlOnModalNumber.js";
+import { enabledResultModalButton } from "./utils/setAttribute/setAttResultModalButton.js";
 
 const $showResultButton = document.querySelector(".open-result-modal-button");
 const $modalClose = document.querySelector(".modal-close");
@@ -18,6 +19,7 @@ $modalClose.addEventListener("click", onModalClose);
 
 export const luckyLotto = () => {
   init();
+  enabledResultModalButton();
   controlOnModalNumber();
 };
 

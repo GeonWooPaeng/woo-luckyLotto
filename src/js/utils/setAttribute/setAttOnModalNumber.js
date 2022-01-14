@@ -8,5 +8,10 @@ export const onModalNumberShow = () => {
 
 export const onModalNumberClose = () => {
   const $modalNumber = document.querySelector(".modal-number");
+  const $lottoNumbersToggleButton = document.querySelector(
+    ".lotto-numbers-toggle-button"
+  );
+
   $modalNumber.classList.remove("open");
+  $lottoNumbersToggleButton.checked = false;
 };
