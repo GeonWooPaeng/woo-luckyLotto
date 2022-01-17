@@ -11,14 +11,11 @@ const insertLottoResultNumber = (el, cnt = "n") => {
 
 const insertResultYieldOnModal = (totalWinningMoney) => {
   const $purchaseLottoMoney = document.querySelector("#purchase-lotto-money");
-  const $restartButton = document.querySelector(".restart-btn");
-  let lottoYield;
-  lottoYield =
+  const $lottoYield = document.querySelector(".lotto-yield");
+
+  let lottoYieldValue =
     Math.floor(totalWinningMoney / Number($purchaseLottoMoney.value)) * 100;
-  $restartButton.insertAdjacentHTML(
-    "beforebegin",
-    setResultYieldOnModalHTML(lottoYield)
-  );
+  $lottoYield.textContent = `당신의 총 수익률은 ${lottoYieldValue}%입니다.`;
 };
 
 export const setResultOnModal = (lottoResult) => {
