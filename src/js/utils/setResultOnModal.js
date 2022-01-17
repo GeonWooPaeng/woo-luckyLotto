@@ -15,7 +15,7 @@ const insertResultYieldOnModal = (totalWinningMoney) => {
   let lottoYield;
   lottoYield =
     Math.floor(totalWinningMoney / Number($purchaseLottoMoney.value)) * 100;
-  $restartButton.parentNode.insertAdjacentHTML(
+  $restartButton.insertAdjacentHTML(
     "beforebegin",
     setResultYieldOnModalHTML(lottoYield)
   );
