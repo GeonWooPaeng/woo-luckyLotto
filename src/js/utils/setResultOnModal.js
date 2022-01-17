@@ -1,11 +1,15 @@
 import { setResultNumberOnModalHTML } from "./setHtml/setResultNumberOnModalHTML.js";
-import { setResultYieldOnModalHTML } from "./setHtml/setResultYieldOnModalHTML.js ";
 
 const insertLottoResultNumber = (el, cnt = "n") => {
+  let money;
+
   el.lastElementChild.remove();
   el.insertAdjacentHTML("beforeend", setResultNumberOnModalHTML(cnt));
-  let money = el.lastElementChild.previousElementSibling.textContent.split(",");
-  money = Number(money.reduce((acc, cur) => (acc += cur)));
+  money = Number(
+    el.lastElementChild.previousElementSibling.textContent
+      .split(",")
+      .reduce((acc, cur) => (acc += cur))
+  );
   return cnt * money;
 };
 
