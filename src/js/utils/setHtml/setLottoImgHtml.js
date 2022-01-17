@@ -1,4 +1,4 @@
-import { getRandomNumsToString } from "../getRandom.js";
+import { getRandomNumsToString } from "../calculation/getRandom.js";
 
 export const setLottoImgHTML = () => {
   let number = getRandomNumsToString();
