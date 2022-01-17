@@ -1,12 +1,12 @@
 import { setLottoNumberOnModal } from "../setLottoNumberOnModal.js";
 
-export const onModalNumberShow = () => {
+export const showOnModalNumber = () => {
   const $modalNumber = document.querySelector(".modal-number");
   $modalNumber.classList.add("open");
   setLottoNumberOnModal();
 };
 
-export const onModalNumberClose = () => {
+export const closeOnModalNumber = () => {
   const $modalNumber = document.querySelector(".modal-number");
   const $lottoNumbersToggleButton = document.querySelector(
     ".lotto-numbers-toggle-button"

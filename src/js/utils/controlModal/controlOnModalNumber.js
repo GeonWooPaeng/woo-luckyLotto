@@ -1,6 +1,6 @@
 import {
-  onModalNumberShow,
-  onModalNumberClose,
+  showOnModalNumber,
+  closeOnModalNumber,
 } from "../setAttribute/setAttOnModalNumber.js";
 
 export const controlOnModalNumber = () => {
@@ -9,10 +9,10 @@ export const controlOnModalNumber = () => {
     ".lotto-numbers-toggle-button"
   );
 
-  $modalNumberClose.addEventListener("click", onModalNumberClose);
+  $modalNumberClose.addEventListener("click", closeOnModalNumber);
   $lottoNumbersToggleButton.addEventListener("click", (event) => {
     if (event.target.checked) {
-      onModalNumberShow();
+      showOnModalNumber();
     }
   });
 };

@@ -1,3 +1,5 @@
+import { setLottoNumberOnModalHtml } from "./setHtml/setLottoNumberOnModalHtml.js";
+
 export const setLottoNumberOnModal = () => {
   const $lottoNumberTableLastChild = document.querySelector(
     ".lotto-number-table > tbody"
@@ -9,11 +11,7 @@ export const setLottoNumberOnModal = () => {
     let lottoNums = $lottoImg.dataset.number.split(",").join("-");
     $lottoNumberTableLastChild.insertAdjacentHTML(
       "beforeend",
-      `<tr class="text-center>
-            <td class="p-3"></td>
-            <td class="p-3">${idx}</td>
-            <td class="p-3">${lottoNums}</td>
-          </tr>`
+      setLottoNumberOnModalHtml(idx, lottoNums)
     );
   });
 };
