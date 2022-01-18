@@ -19,6 +19,7 @@ const insertResultYieldOnModal = (totalWinningMoney) => {
 
   let lottoYieldValue =
     Math.floor(totalWinningMoney / Number($purchaseLottoMoney.value)) * 100;
+  lottoYieldValue = isNaN(lottoYieldValue) ? "n" : lottoYieldValue;
   $lottoYield.textContent = `당신의 총 수익률은 ${lottoYieldValue}%입니다.`;
 };
 
@@ -56,7 +57,5 @@ export const setResultOnModal = (lottoResult) => {
       );
     } else insertLottoResultNumber($resultTableTbodyTr);
   });
-  totalWinningMoney > 0
-    ? insertResultYieldOnModal(totalWinningMoney)
-    : insertResultYieldOnModal(0); // 수익률을 제공하는 곳
+  insertResultYieldOnModal(totalWinningMoney);
 };
