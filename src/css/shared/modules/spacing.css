@@ -2612,3 +2612,16 @@
 .pl-px {
   padding-left: 1px;
 }
+
+/*float*/
+.float-inherit {
+  float: inherit;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}

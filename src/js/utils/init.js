@@ -1,6 +1,3 @@
-import { hidePurchasedLottoSection } from "./setAttribute/setAttPurchasedLottoSection.js";
-import { disabledWinningAndBonusNumber } from "./setAttribute/setAttWinningAndBonusNumber.js";
-import { disabledResultModalButton } from "./setAttribute/setAttResultModalButton.js";
 import { setPurchasedLottoSection } from "./setPurchasedLottoSection.js";
 
 const calCntLottoNums = (money) => {
