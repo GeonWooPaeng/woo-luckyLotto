@@ -6,7 +6,7 @@ export const restart = () => {
   const $bonusNumber = document.querySelector(".bonus-number");
 
   $purchaseLottoMoney.value = "";
-  $purchasedLottoCnt.textContent = "";
+  $purchasedLottoCnt.textContent = ""; // undefined 일 경우 error 발생
   $purchasedLottoImg.textContent = "";
   $bonusNumber.value = "";
   $winningNumbers.forEach(($winningNumber) => {
